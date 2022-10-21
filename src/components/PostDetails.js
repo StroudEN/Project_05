@@ -16,6 +16,7 @@ const PostDetails = () => {
             <p>{post.description}</p>
             <p>{post.price}</p>
             <p>Location: {post.location}</p>
+            {/* add message input and submit */}
         </div>
 
     )
