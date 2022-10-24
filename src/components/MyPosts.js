@@ -52,33 +52,35 @@ const MyPosts = () => {
 
     return(
         <div>
-            {myName.length ? <p>Welcome back, {myName}!</p>: <p>friend</p>}
-            <p>Your Messages:</p>
-            {myMessages && myMessages.length ? myMessages.map((msgevent, idx) => {
-                
-                return(
-                    <div key={idx}>
-                        {/* {console.log(msgevent)} */}
-                        <p>{msgevent.title}</p>
-                    </div>
-                )
-            }):<p>No active messages</p>
-            }
-            <p>Your Posts:</p>
-            {myPosts && myPosts.length ? myPosts.map((event, idx) => {
-                if (event.active==false){
-                return null 
-            } else {
-                
-                return(
-                    <div key={idx}>
-                        
-                        <p>{event.title}</p>
-                        <button onClick={()=>{deletePost(event._id)}}>Delete</button>
-                    </div>
-                )}
-            }):<p>No active posts</p>
-            }
+            {myName.length ? <p className='welcomeBack'>Welcome back, {myName}!</p>: <p className='welcomeBack'>Welcome back, friend</p>}
+            <div className="messageBoard">
+                <p className='postHeader'>Your Messages:</p>
+                {myMessages && myMessages.length ? myMessages.map((msgevent, idx) => {
+                    
+                    return(
+                        <div key={idx} className='postItem'>
+                            {/* {console.log(msgevent)} */}
+                            <p>{msgevent.title}</p>
+                        </div>
+                    )
+                }):<p className='postItem'>No active messages</p>
+                }
+                <p className='postHeader'>Your Posts:</p>
+                {myPosts && myPosts.length ? myPosts.map((event, idx) => {
+                    if (event.active==false){
+                    return null 
+                } else {
+                    
+                    return(
+                        <div key={idx} className='postItem'>
+                            
+                            <p>{event.title}</p>
+                            <button onClick={()=>{deletePost(event._id)}}>Delete</button>
+                        </div>
+                    )}
+                }):<p className='postItem'>No active posts</p>
+                }
+            </div>
         </div>
     )
 }

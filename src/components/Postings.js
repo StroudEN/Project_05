@@ -15,11 +15,11 @@ const Postings = () => {
     // const post = posts[id];
 
     return(
-        <div>
+        <div id='postContainer'>
             
                 {posts.map((post, idx) => {
                     return(
-                    <div key={idx}>
+                    <div key={idx} className='postItem'>
                         <p>{post.title}</p>
                         <Link to={`/postings/${idx}`}>Details</Link>
                     </div>

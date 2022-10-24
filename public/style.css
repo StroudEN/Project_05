@@ -1,0 +1,74 @@
+#homeHeader{
+    display: flex;
+    justify-content: center;
+    border: solid rgb(108, 109,83);
+    border-radius: 10px;
+    background-color: rgb(226, 233, 166);
+    color: rgb(175, 72, 25);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+body{
+    background-image: linear-gradient(rgb(129, 217, 255), rgb(223, 223, 180));
+    min-height: 100vh;
+}
+#navTag{
+    display: flex;
+    justify-content: space-around;
+}
+.navItem{
+    background-color: rgb(231, 240, 239);
+    padding: 10px;
+    border-radius: 20px;
+    border: solid white;
+}
+.loginBox{
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+    background-color: rgb(175, 175, 175);
+    width:50vw;
+    padding: 10px;
+    border: grey solid;
+    border-radius: 10px;
+}
+#loginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#postContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.postItem{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    flex-direction: column;
+    border: solid rgb(112, 165, 224);
+    min-width: 40%;
+    background: rgb(149, 191, 221);
+    margin-top: 10px;
+    border-radius: 50px;
+}
+.postHeader{
+    display:flex;
+    border: solid rgb(108, 109,83);
+    background-color: rgb(223, 223, 180);
+    color: rgb(175, 72, 25);
+    font-size: 25px;
+}
+.welcomeBack{
+    border: solid rgb(108, 109,83);
+    background-color: rgb(223, 223, 180);
+    color: rgb(175, 72, 25);
+    font-size: 25px;
+}
+.messageBoard{
+    border:solid rgb(97, 97, 86);
+    background: rgb(143, 145, 108);
+    margin-top: -25px;
+}

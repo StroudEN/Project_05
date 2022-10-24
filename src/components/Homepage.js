@@ -27,8 +27,9 @@ const ThatsBazaar = () => {
 
     return(
         <div>
-            <h1>That's Bazaar!</h1>
-
+            <div  id="homeHeader">
+                <h1>That's Bazaar!</h1>
+            </div>
             <NavBar />
 {/* ==========================Main View Window================================== */}
             <Outlet context= {products}/>

@@ -41,22 +41,23 @@ const Login = () => {
 
     return(
 
-        <div>
-            <form onSubmit={accountHandler}>
+        <div id="loginContainer">
+            <div className='loginBox'>    
+                <form onSubmit={accountHandler}>
 
-                <label>Enter Username Here</label>
-                <input type= 'text' value= {username} onChange= {updateUsernameState}></input>
+                    <label>Enter Username Here</label>
+                    <input type= 'text' value= {username} onChange= {updateUsernameState}></input>
 
-                <br/>
+                    <br/>
 
-                <label>Enter Password Here</label>
-                <input type= 'password' value= {password} onChange= {updatePasswordState}></input>
+                    <label>Enter Password Here</label>
+                    <input type= 'password' value= {password} onChange= {updatePasswordState}></input>
 
-                <br/>
+                    <br/>
 
-                <button type= "submit">Login</button>
-            </form>
-
+                    <button type= "submit">Login</button>
+                </form>
+            </div>
             <Link to='Register'>Register</Link>
             < Outlet />
         </div>

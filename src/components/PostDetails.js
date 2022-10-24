@@ -38,17 +38,19 @@ const PostDetails = () => {
     console.dir(post)
     return(
         <div>
-            <h2>{post.title}</h2>
-            <p>posted by: {post.author.username}</p>
-            <p>{post.description}</p>
-            <p>{post.price}</p>
-            <p>Location: {post.location}</p>
-            {/* add message input and submit */}
-            <form onSubmit={messageHandler}>
-                <p>Message {post.author.username}, don't forget to include contact information!</p>
-                <input type='text' value= {message} onChange={updateMessageState}></input>
-                <button type= 'submit'>Send</button>
-            </form>
+            <h2 className='postHeader'>{post.title}</h2>
+            <div className='messageBoard'>
+                <p>posted by: {post.author.username}</p>
+                <p>{post.description}</p>
+                <p>{post.price}</p>
+                <p>Location: {post.location}</p>
+                {/* add message input and submit */}
+                <form onSubmit={messageHandler}>
+                    <p>Message {post.author.username}, don't forget to include contact information!</p>
+                    <input type='text' value= {message} onChange={updateMessageState}></input>
+                    <button type= 'submit'>Send</button>
+                </form>
+            </div>
         </div>
 
     )

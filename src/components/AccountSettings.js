@@ -69,8 +69,6 @@ async function submitHandler (event) {
             {localStorage.getItem('token') && localStorage.getItem('token').length ?
                 
                 <div>
-                    <p>Account information</p>
-                
                     <MyPosts />
                 
                     <p>Make a Listing!</p>
